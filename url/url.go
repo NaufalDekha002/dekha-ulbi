@@ -13,4 +13,6 @@ func Web(page *fiber.App) {
 	page.Get("/", controller.Home)                                        //ujicoba panggil package musik
 	page.Get("/presensi", controller.GetPresensi)
 	page.Get("/peneliti", controller.GetPeneliti)
+	page.Get("/hasil teliti", controller.GetHasilTeliti)
+	page.Get("/all", controller.GetAll)
 }
