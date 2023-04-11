@@ -9,6 +9,8 @@ github.com/Azure/azure-sdk-for-go/sdk/internal v1.0.0/go.mod h1:eWRD7oawr1Mu1sLC
 github.com/AzureAD/microsoft-authentication-library-for-go v0.5.1/go.mod h1:Vt9sXTKwMyGcOxSmLDMnGPgqsUg7m8pe215qMLrDXw4=
 github.com/NaufalDekha002/penelitian-tugas v0.0.2 h1:pLid8i3eZbXu+oxSiOX899BJn7lJMzixxCrBtAnaCN0=
 github.com/NaufalDekha002/penelitian-tugas v0.0.2/go.mod h1:Jtwd6M7VSfVxRpn/nF0XqBcNkRc87zDVc6cd+pUUrII=
+github.com/NaufalDekha002/penelitian-tugas v0.0.3 h1:UJTH/UCtjM0xblVNykr+FMqy131tW00BP1ejQ8Az0Zg=
+github.com/NaufalDekha002/penelitian-tugas v0.0.3/go.mod h1:Jtwd6M7VSfVxRpn/nF0XqBcNkRc87zDVc6cd+pUUrII=
 github.com/aiteung/atapi v0.0.10 h1:n2UpykaSIlFrdfrEaTU27/y1gXZ0KMAJLypNH4eb+so=
 github.com/aiteung/atapi v0.0.10/go.mod h1:WRmSafqlDpo8PqT1NxoobjVEXkk7vJ6fj7bzh0MTzkM=
 github.com/aiteung/atdb v0.0.9 h1:NpkLAdOJvFnZlNiYWqKFtWtRi0YWG2kFmWPwEzgiSQA=

@@ -3,7 +3,7 @@ module github.com/NaufalDekha002/dekha-ulbi
 go 1.20
 
 require (
-	github.com/NaufalDekha002/penelitian-tugas v0.0.2
+	github.com/NaufalDekha002/penelitian-tugas v0.0.3
 	github.com/aiteung/atdb v0.0.9
 	github.com/aiteung/musik v0.0.5
 	github.com/aiteung/presensi v0.0.18
