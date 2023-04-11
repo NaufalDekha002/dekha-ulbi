@@ -15,7 +15,7 @@ var MariaStringAkademik string = os.Getenv("MARIASTRINGAKADEMIK")
 
 var DBUlbimariainfo = atdb.DBInfo{
 	DBString: MariaStringAkademik,
-	DBName:   "tes_db",
+	DBName:   "e319ve21mrxs7ffq",
 }
 
 var DBUlbimongoinfo = atdb.DBInfo{
