@@ -34,7 +34,7 @@ func GetPresensi(c *fiber.Ctx) error {
 }
 
 func GetPeneliti(c *fiber.Ctx) error {
-	nl := inimodul.GetPenelitiFromPhoneNumber("083543242546", config.Ulbimongoconn, "phone number")
+	nl := inimodul.GetPenelitiFromPhoneNumber("083543242546", config.Ulbimongoconn, "phone_number")
 	return c.JSON(nl)
 }
 
