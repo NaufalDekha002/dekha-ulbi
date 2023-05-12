@@ -27,4 +27,5 @@ func Web(page *fiber.App) {
 	page.Get("/hasil teliti", controller.GetHasilTeliti)
 	page.Get("/all", controller.GetAll)
 	page.Get("/semua", controller.GetAllPresensi)
+	page.Post("/ins", controller.InsertData)
 }

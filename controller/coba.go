@@ -8,6 +8,9 @@ import (
 	inimodul "github.com/NaufalDekha002/penelitian-tugas/module"
 	cek "github.com/aiteung/presensi"
 	"github.com/gofiber/fiber/v2"
+	modullat "github.com/indrariksa/be_presensi/module"
+	modellat "github.com/indrariksa/be_presensi/model"
+
 )
 
 func Home(c *fiber.Ctx) error {
@@ -87,6 +90,35 @@ func InsertAbsen(c *fiber.Ctx) error {
 	return c.JSON(map[string]interface{}{
 		"status":      http.StatusOK,
 		"message":     "Biodata berhasil disimpan.",
+		"inserted_id": insertedID,
+	})
+}
+
+func InsertData(c *fiber.Ctx) error {
+	db := config.Ulbimongoconn
+	var presensi modellat.Presensi
+	if err := c.BodyParser(&presensi); err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	insertedID, err := modullat.InsertPresensi(db, "presensi",
+		presensi.Longitude,
+		presensi.Latitude,
+		presensi.Location,
+		presensi.Phone_number,
+		presensi.Checkin,
+		presensi.Biodata)
+	if err != nil {
+		return c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+			"status":  http.StatusInternalServerError,
+			"message": err.Error(),
+		})
+	}
+	return c.Status(http.StatusOK).JSON(fiber.Map{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
 		"inserted_id": insertedID,
 	})
 }

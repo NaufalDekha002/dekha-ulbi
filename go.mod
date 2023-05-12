@@ -9,6 +9,7 @@ require (
 	github.com/aiteung/presensi v0.0.18
 	github.com/gofiber/fiber/v2 v2.42.0
 	github.com/gofiber/websocket/v2 v2.1.4
+	github.com/indrariksa/be_presensi v0.0.8
 	github.com/whatsauth/whatsauth v0.1.89
 )
 
