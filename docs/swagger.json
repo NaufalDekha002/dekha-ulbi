@@ -16,5 +16,72 @@
     },
     "host": "localhost:8080",
     "basePath": "/",
-    "paths": {}
+    "paths": {
+        "/presensi": {
+            "get": {
+                "description": "Mengambil semua data presensi.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Presensi"
+                ],
+                "summary": "Get All Data Presensi.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.Presensi"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.Peneliti": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "jabatan": {
+                    "type": "string"
+                },
+                "jadwalpenelitian": {
+                    "type": "string"
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.Presensi": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "biodata": {
+                    "$ref": "#/definitions/controller.Peneliti"
+                },
+                "checkin": {
+                    "description": "Datetime     primitive.DateTime `bson:\"datetime,omitempty\" json:\"datetime,omitempty\"`",
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                }
+            }
+        }
+    }
 }

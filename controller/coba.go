@@ -8,9 +8,8 @@ import (
 	inimodul "github.com/NaufalDekha002/penelitian-tugas/module"
 	cek "github.com/aiteung/presensi"
 	"github.com/gofiber/fiber/v2"
-	modullat "github.com/indrariksa/be_presensi/module"
 	modellat "github.com/indrariksa/be_presensi/model"
-
+	modullat "github.com/indrariksa/be_presensi/module"
 )
 
 func Home(c *fiber.Ctx) error {
@@ -51,6 +50,14 @@ func GetAll(c *fiber.Ctx) error {
 	return c.JSON(nl)
 }
 
+// GetAllPresensi godoc
+// @Summary Get All Data Presensi.
+// @Description Mengambil semua data presensi.
+// @Tags Presensi
+// @Accept json
+// @Produce json
+// @Success 200 {object} Presensi
+// @Router /presensi [get]
 func GetAllPresensi(c *fiber.Ctx) error {
 	nl := inimodul.GetAllPresensi(config.Ulbimongoconn, "hasil")
 	return c.JSON(nl)

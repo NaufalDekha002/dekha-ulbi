@@ -1,4 +1,32 @@
 basePath: /
+definitions:
+  controller.Peneliti:
+    properties:
+      _id:
+        type: string
+      jabatan:
+        type: string
+      jadwalpenelitian:
+        type: string
+      nama:
+        type: string
+      phone_number:
+        type: string
+    type: object
+  controller.Presensi:
+    properties:
+      _id:
+        type: string
+      biodata:
+        $ref: '#/definitions/controller.Peneliti'
+      checkin:
+        description: Datetime     primitive.DateTime `bson:"datetime,omitempty" json:"datetime,omitempty"`
+        type: string
+      location:
+        type: string
+      phone_number:
+        type: string
+    type: object
 host: localhost:8080
 info:
   contact:
@@ -11,5 +39,20 @@ info:
   termsOfService: http://swagger.io/terms/
   title: Fiber Example API
   version: "1.0"
-paths: {}
+paths:
+  /presensi:
+    get:
+      consumes:
+      - application/json
+      description: Mengambil semua data presensi.
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Presensi'
+      summary: Get All Data Presensi.
+      tags:
+      - Presensi
 swagger: "2.0"
