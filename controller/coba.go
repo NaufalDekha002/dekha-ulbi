@@ -50,13 +50,13 @@ func GetAll(c *fiber.Ctx) error {
 	return c.JSON(nl)
 }
 
-// GetAllsemua godoc
-// @Summary Get All Data semua.
-// @Description Mengambil semua data semua.
+// GetAllPresensi godoc
+// @Summary Get All Data Presensi.
+// @Description Mengambil semua data presensi.
 // @Tags semua
 // @Accept json
 // @Produce json
-// @Success 200 {object} semua
+// @Success 200 {object} Presensi
 // @Router /semua [get]
 func GetAllPresensi(c *fiber.Ctx) error {
 	nl := inimodul.GetAllPresensi(config.Ulbimongoconn, "hasil")

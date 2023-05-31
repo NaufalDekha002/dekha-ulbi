@@ -24,7 +24,7 @@ const docTemplate = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/presensi": {
+        "/semua": {
             "get": {
                 "description": "Mengambil semua data presensi.",
                 "consumes": [
@@ -34,7 +34,7 @@ const docTemplate = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Presensi"
+                    "semua"
                 ],
                 "summary": "Get All Data Presensi.",
                 "responses": {

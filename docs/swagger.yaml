@@ -40,7 +40,7 @@ info:
   title: Fiber Example API
   version: "1.0"
 paths:
-  /presensi:
+  /semua:
     get:
       consumes:
       - application/json
@@ -54,5 +54,5 @@ paths:
             $ref: '#/definitions/controller.Presensi'
       summary: Get All Data Presensi.
       tags:
-      - Presensi
+      - semua
 swagger: "2.0"
