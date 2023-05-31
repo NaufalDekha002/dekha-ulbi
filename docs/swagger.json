@@ -14,7 +14,7 @@
         },
         "version": "1.0"
     },
-    "host": "localhost:8080",
+    "host": "penelitian-tugas.herokuapp.com",
     "basePath": "/",
     "paths": {
         "/presensi": {

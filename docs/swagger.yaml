@@ -27,7 +27,7 @@ definitions:
       phone_number:
         type: string
     type: object
-host: localhost:8080
+host: penelitian-tugas.herokuapp.com
 info:
   contact:
     email: fiber@swagger.io
