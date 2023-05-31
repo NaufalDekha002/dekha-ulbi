@@ -5,6 +5,8 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 
+	"github.com/gofiber/swagger"
+
 	"github.com/gofiber/websocket/v2"
 )
 
@@ -29,4 +31,5 @@ func Web(page *fiber.App) {
 	page.Get("/all", controller.GetAll)
 	page.Get("/semua", controller.GetAllPresensi)
 	page.Post("/ins", controller.InsertData)
+	page.Get("/docs/*", swagger.HandlerDefault)
 }
